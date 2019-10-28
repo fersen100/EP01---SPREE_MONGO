@@ -1,0 +1,25 @@
+spree:
+  image: "spreecommerce/spree:3.6.4"
+  ports:
+    - "3000:3000"
+  volumes:
+     - "spree/"
+
+db:
+  image: "mongo"
+  ports:
+    - "27017:27017"
+  volumes:
+    - "mongo:/data/db"
+
+web:
+  build: .
+  ports:
+    - "5000:5000"
+  volumes:
+    - .:/todo
+  links:
+    - db
+    - spree
+
+

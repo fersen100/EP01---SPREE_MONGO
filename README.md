@@ -10,4 +10,4 @@
 docker login
 
 # Para a execução da imagem do docker criada para esse EP, realizar a execução do comando abaixo, que realiza a execução do docker com a imagem criada (spree_mongo_senac)
-docker build –t spree_mongo_senac .
+docker build –t fersen2019/senac_spree
